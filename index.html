@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center><h1 id="text"></h1>
+    <h2 id="text2"></h2>
+    <button id="button" onclick= clickHey()></button>
+    <button id="button1" onclick= clickHey2()></button></center>
+
+<script>
+    let num = 0
+    let click = "+1"
+    let click1 = "-1"
+    let h = ""
+    
+
+    document.getElementById('text').innerText = num
+    document.getElementById('text2').innerText = h
+    document.getElementById('button').innerText = click
+    document.getElementById('button1').innerText = click1
+    
+    function clickHey() {
+        num++;
+        document.getElementById('text').innerText = num
+        const result = num === 20
+
+    
+    if(result == true) {
+
+        let h = "you have reached 20"
+        document.getElementById('text2').innerText = h
+        document.getElementById('button').style.visibility = 'hidden';
+        document.getElementById('button1').style.visibility = 'hidden';
+    }
+    if(result == false) {
+
+let h = ""
+document.getElementById('text2').innerText = h
+
+}
+    }
+
+    function clickHey2() {
+        num--;
+        document.getElementById('text').innerText = num
+        const result = num === 20
+    
+    if(result == false) {
+
+        let h = ""
+        document.getElementById('text2').innerText = h
+        document.getElementById('button').style.visibility = 'hidden';
+
+    }
+    if(result == true) {
+
+let h = "you have reached 20"
+document.getElementById('text2').innerText = h
+
+}
+    }
+
+
+  
+    
+
+</script>
+</body>
+</html>
